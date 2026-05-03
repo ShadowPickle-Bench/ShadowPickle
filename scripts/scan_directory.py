@@ -34,7 +34,9 @@ def scannign_directory(base_dir):
                 file_path = os.path.join(path, filename)
                 print(f"Processing: {file_path}")
                 try:
-                    do_open_source_checks(file_path, "scanning_directory.csv")
+                    do_open_source_checks(
+                        file_path, f"scanning_directory_{base_dir}.csv"
+                    )
                 except Exception as e:
                     print(f"Failed to process '{file_path}': {type(e).__name__}: {e}")
                     traceback.print_exc()

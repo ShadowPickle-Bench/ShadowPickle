@@ -25,12 +25,12 @@ def picklescan_check(row, picklescan_trues, picklescan_legit, picklescan_librari
         picklescan_trues.append(raw_name)
         # print(picklescan_output)
         if "Infected files" in picklescan_output:
-            print("FOUND ONEEEEE PXIKLESCANNNN")
+            # print("FOUND ONEEEEE PXIKLESCANNNN")
             print(raw_name)
             picklescan_legit.append(raw_name)
             pattern = r"dangerous import\s+'([^']+)'\s+FOUND"
             found_library = re.findall(pattern, picklescan_output)
-            print("FOUNFUONFONFOUFNOFUFN", found_library)
+            # print("FOUNFUONFONFOUFNOFUFN", found_library)
             try:
                 picklescan_libraries[found_library[0]] += 1
             except KeyError as e:

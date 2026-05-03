@@ -1,4 +1,5 @@
 import subprocess
+import argparse
 import sys
 import os
 import csv
@@ -150,7 +151,11 @@ def do_open_source_checks(
 
 
 if __name__ == "__main__":
-    do_open_source_checks(
-        "/home//Downloads/injected_models_danurahul__Eddie_neo_j6_pytorch_model_injected_python_os_nc_weights_bypass.bin",
-        python_env="./.venv/bin/activate",
+    parser = argparse.ArgumentParser(
+        description="Script to scan models with open-source scanners"
     )
+
+    parser.add_argument("--model-path", help="path to modelto analyse")
+    parser.add_argument("--venv-path", help="path to the environment")
+    args = parser.parse_args()
+    do_open_source_checks(args.model_path, args.venv_path)

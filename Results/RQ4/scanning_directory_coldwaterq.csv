@@ -1,0 +1,82 @@
+name,picklescan_result,modelscan_result,fickling_result,modeltracer_result,fickling_category,weights_only_result,picklescan_output,modelscan_output,fickling_output,weights_only_output
+../sectest/coldwaterq_inject_calc.pt,True,False,False,True,Severity.OVERTLY_MALICIOUS,True,"/home/zol/School/Research/sectest/coldwaterq_inject_calc.pt: dangerous import '__builtin__ exec' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+",False,"The 3rd opcode is a duplicate PROTO, which is unusual and may be indicative of a tampered pickle
+The 14th opcode is a duplicate PROTO, which is unusual and may be indicative of a tampered pickle
+The protocol version is 2, but the PROTO opcode is not the first opcode in the pickle, as required for versions 2 and later; this may be indicative of a tampered pickle
+The protocol version is 2, but the PROTO opcode is not the first opcode in the pickle, as required for versions 2 and later; this may be indicative of a tampered pickle
+Call to `exec(_var0)` is almost certainly evidence of a malicious pickle file
+Call to `exec(_var0)` is almost certainly evidence of a malicious pickle file
+Variable `_var1` is assigned value `exec(_var0)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL exec was not an allowed global by default. Please use `torch.serialization.add_safe_globals([exec])` or the `torch.serialization.safe_globals([exec])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+../sectest/fickling_system_calc.pt,True,False,True,True,Severity.OVERTLY_MALICIOUS,True,"/home/zol/School/Research/sectest/fickling_system_calc.pt: dangerous import '__builtin__ eval' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+",False,"The protocol version is 2, but the PROTO opcode is not the first opcode in the pickle, as required for versions 2 and later; this may be indicative of a tampered pickle
+Call to `eval(...)` is almost certainly evidence of a malicious pickle file
+Call to `eval(...)` is almost certainly evidence of a malicious pickle file
+Variable `_var0` is assigned value `eval(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL eval was not an allowed global by default. Please use `torch.serialization.add_safe_globals([eval])` or the `torch.serialization.safe_globals([eval])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+../sectest/test2.pt,True,False,True,False,Severity.OVERTLY_MALICIOUS,True,"WARNING: Invalid PyTorch magic number for file /home/zol/School/Research/sectest/test2.pt: None != 119547037146038801333356. Trying to scan as non-PyTorch file.
+/home/zol/School/Research/sectest/test2.pt: dangerous import '__builtin__ exec' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+",False,"The 3rd opcode is a duplicate PROTO with a different version than reported in the previous PROTO opcode, which is almost certainly a sign of a tampered pickle
+The 14th opcode is a duplicate PROTO, which is unusual and may be indicative of a tampered pickle
+The protocol version is 2, but the PROTO opcode is not the first opcode in the pickle, as required for versions 2 and later; this may be indicative of a tampered pickle
+The protocol version is 4, but the PROTO opcode is not the first opcode in the pickle, as required for versions 2 and later; this may be indicative of a tampered pickle
+Call to `exec(_var0)` is almost certainly evidence of a malicious pickle file
+Call to `exec(_var0)` is almost certainly evidence of a malicious pickle file
+Variable `_var1` is assigned value `exec(_var0)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+../sectest/coldwaterq_inject_first_calc.pt,True,False,True,True,Severity.OVERTLY_MALICIOUS,True,"/home/zol/School/Research/sectest/coldwaterq_inject_first_calc.pt: dangerous import '__builtin__ exec' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+",False,"The 3rd opcode is a duplicate PROTO, which is unusual and may be indicative of a tampered pickle
+The 14th opcode is a duplicate PROTO, which is unusual and may be indicative of a tampered pickle
+The protocol version is 2, but the PROTO opcode is not the first opcode in the pickle, as required for versions 2 and later; this may be indicative of a tampered pickle
+The protocol version is 2, but the PROTO opcode is not the first opcode in the pickle, as required for versions 2 and later; this may be indicative of a tampered pickle
+Call to `exec(_var0)` is almost certainly evidence of a malicious pickle file
+Call to `exec(_var0)` is almost certainly evidence of a malicious pickle file
+Variable `_var1` is assigned value `exec(_var0)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL exec was not an allowed global by default. Please use `torch.serialization.add_safe_globals([exec])` or the `torch.serialization.safe_globals([exec])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+../sectest/test3.pt,True,False,True,False,Severity.OVERTLY_MALICIOUS,True,"WARNING: Invalid PyTorch magic number for file /home/zol/School/Research/sectest/test3.pt: None != 119547037146038801333356. Trying to scan as non-PyTorch file.
+/home/zol/School/Research/sectest/test3.pt: dangerous import '__builtin__ eval' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+",False,"The protocol version is 4, but the PROTO opcode is not the first opcode in the pickle, as required for versions 2 and later; this may be indicative of a tampered pickle
+Call to `eval(""print('hi')"")` is almost certainly evidence of a malicious pickle file
+Call to `eval(""print('hi')"")` is almost certainly evidence of a malicious pickle file
+Variable `_var0` is assigned value `eval(""print('hi')"")` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL eval was not an allowed global by default. Please use `torch.serialization.add_safe_globals([eval])` or the `torch.serialization.safe_globals([eval])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."

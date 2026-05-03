@@ -1,0 +1,196 @@
+name,picklescan_result,modelscan_result,fickling_result,modeltracer_result,fickling_category,weights_only_result,picklescan_output,modelscan_output,fickling_output,weights_only_output
+./payloads/advanced/obfuscated_Pypi_staged_payload.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from pyarmor_runtime_000000.pyarmor_runtime import __pyarmor__` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var1` is assigned value `__pyarmor__(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__ was not an allowed global by default. Please use `torch.serialization.add_safe_globals([pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__])` or the `torch.serialization.safe_globals([pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+./payloads/advanced/OrderedDict_delayed_execution.pkl,False,False,True,True,Severity.SUSPICIOUS,False,False,False,Variable `_var0` is assigned value `OrderedDict(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file,Invalid magic number; corrupt file?
+./payloads/advanced/anti_vm_pypi.pkl,False,False,True,False,Severity.LIKELY_UNSAFE,True,False,False,"`from slutterprime.eatme import digest` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `digest(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL slutterprime.eatme.digest was not an allowed global by default. Please use `torch.serialization.add_safe_globals([slutterprime.eatme.digest])` or the `torch.serialization.safe_globals([slutterprime.eatme.digest])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+./payloads/advanced/delayed_execution_pypi.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from slutterprime.eatme import digest` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `digest(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL slutterprime.eatme.digest was not an allowed global by default. Please use `torch.serialization.add_safe_globals([slutterprime.eatme.digest])` or the `torch.serialization.safe_globals([slutterprime.eatme.digest])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+./payloads/advanced/delayed_execution.pkl,True,True,True,False,Severity.OVERTLY_MALICIOUS,True,"/home/zol/School/Research/BenchMarking_Hubs/payloads/advanced/delayed_execution.pkl: dangerous import '__builtin__ exec' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+","No settings file detected at /home/zol/School/Research/BenchMarking_Hubs/modelscan-settings.toml. Using defaults. 
+
+Scanning /home/zol/School/Research/BenchMarking_Hubs/payloads/advanced/delayed_execution.pkl using modelscan.scanners.PickleUnsafeOpScan model scan
+
+--- Summary ---
+
+Total Issues: 1
+
+Total Issues By Severity:
+
+    - LOW: 0
+    - MEDIUM: 0
+    - HIGH: 0
+    - CRITICAL: 1
+
+--- Issues by Severity ---
+
+--- CRITICAL ---
+
+Unsafe operator found:
+  - Severity: CRITICAL
+  - Description: Use of unsafe operator 'exec' from module '__builtin__'
+  - Source: /home/zol/School/Research/BenchMarking_Hubs/payloads/advanced/delayed_execution.pkl
+","Call to `exec(...)` is almost certainly evidence of a malicious pickle file
+Call to `exec(...)` is almost certainly evidence of a malicious pickle file
+Variable `_var0` is assigned value `exec(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL exec was not an allowed global by default. Please use `torch.serialization.add_safe_globals([exec])` or the `torch.serialization.safe_globals([exec])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+./payloads/advanced/obfuscated_anti_vm.pkl,False,False,True,False,Severity.LIKELY_UNSAFE,True,False,False,"`from pyarmor_runtime_000000.pyarmor_runtime import __pyarmor__` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var1` is assigned value `__pyarmor__(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__ was not an allowed global by default. Please use `torch.serialization.add_safe_globals([pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__])` or the `torch.serialization.safe_globals([pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+./payloads/advanced/obfuscated_staged_payload.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from pyarmor_runtime_000000.pyarmor_runtime import __pyarmor__` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var1` is assigned value `__pyarmor__(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__ was not an allowed global by default. Please use `torch.serialization.add_safe_globals([pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__])` or the `torch.serialization.safe_globals([pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+./payloads/advanced/obfuscated_External_staged_payload.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from pyarmor_runtime_000000.pyarmor_runtime import __pyarmor__` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var1` is assigned value `__pyarmor__(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__ was not an allowed global by default. Please use `torch.serialization.add_safe_globals([pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__])` or the `torch.serialization.safe_globals([pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+./payloads/advanced/staged_payload_pypi.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from slutterprime.eatme import digest` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `digest(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL slutterprime.eatme.digest was not an allowed global by default. Please use `torch.serialization.add_safe_globals([slutterprime.eatme.digest])` or the `torch.serialization.safe_globals([slutterprime.eatme.digest])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+./payloads/advanced/OrderedDict_staged_payload.pkl,False,False,True,True,Severity.SUSPICIOUS,False,False,False,Variable `_var0` is assigned value `OrderedDict(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file,Invalid magic number; corrupt file?
+./payloads/advanced/OrderedDict_anti_vm.pkl,False,False,True,False,Severity.SUSPICIOUS,False,False,False,Variable `_var0` is assigned value `OrderedDict(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file,Invalid magic number; corrupt file?
+./payloads/advanced/obfuscated_delayed_execution.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from pyarmor_runtime_000000.pyarmor_runtime import __pyarmor__` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var1` is assigned value `__pyarmor__(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__ was not an allowed global by default. Please use `torch.serialization.add_safe_globals([pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__])` or the `torch.serialization.safe_globals([pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+./payloads/advanced/staged_payload.pkl,True,True,True,True,Severity.OVERTLY_MALICIOUS,True,"/home/zol/School/Research/BenchMarking_Hubs/payloads/advanced/staged_payload.pkl: dangerous import '__builtin__ exec' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+","No settings file detected at /home/zol/School/Research/BenchMarking_Hubs/modelscan-settings.toml. Using defaults. 
+
+Scanning /home/zol/School/Research/BenchMarking_Hubs/payloads/advanced/staged_payload.pkl using modelscan.scanners.PickleUnsafeOpScan model scan
+
+--- Summary ---
+
+Total Issues: 1
+
+Total Issues By Severity:
+
+    - LOW: 0
+    - MEDIUM: 0
+    - HIGH: 0
+    - CRITICAL: 1
+
+--- Issues by Severity ---
+
+--- CRITICAL ---
+
+Unsafe operator found:
+  - Severity: CRITICAL
+  - Description: Use of unsafe operator 'exec' from module '__builtin__'
+  - Source: /home/zol/School/Research/BenchMarking_Hubs/payloads/advanced/staged_payload.pkl
+","Call to `exec(...)` is almost certainly evidence of a malicious pickle file
+Call to `exec(...)` is almost certainly evidence of a malicious pickle file
+Variable `_var0` is assigned value `exec(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL exec was not an allowed global by default. Please use `torch.serialization.add_safe_globals([exec])` or the `torch.serialization.safe_globals([exec])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+./payloads/advanced/external_anti_vm.pkl,False,False,True,False,Severity.LIKELY_UNSAFE,True,False,False,"`from external import dangerous_func` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `dangerous_func(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL external.dangerous_func was not an allowed global by default. Please use `torch.serialization.add_safe_globals([external.dangerous_func])` or the `torch.serialization.safe_globals([external.dangerous_func])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+./payloads/advanced/obfuscated_OrderedDict_staged_payload.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from pyarmor_runtime_000000.pyarmor_runtime import __pyarmor__` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var1` is assigned value `__pyarmor__(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__ was not an allowed global by default. Please use `torch.serialization.add_safe_globals([pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__])` or the `torch.serialization.safe_globals([pyarmor_runtime_000000.pyarmor_runtime.__pyarmor__])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+./payloads/advanced/external_delayed_execution.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from external import dangerous_func` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `dangerous_func(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL external.dangerous_func was not an allowed global by default. Please use `torch.serialization.add_safe_globals([external.dangerous_func])` or the `torch.serialization.safe_globals([external.dangerous_func])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+./payloads/advanced/anti_vm.pkl,True,True,True,False,Severity.OVERTLY_MALICIOUS,True,"/home/zol/School/Research/BenchMarking_Hubs/payloads/advanced/anti_vm.pkl: dangerous import '__builtin__ exec' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+","No settings file detected at /home/zol/School/Research/BenchMarking_Hubs/modelscan-settings.toml. Using defaults. 
+
+Scanning /home/zol/School/Research/BenchMarking_Hubs/payloads/advanced/anti_vm.pkl using modelscan.scanners.PickleUnsafeOpScan model scan
+
+--- Summary ---
+
+Total Issues: 1
+
+Total Issues By Severity:
+
+    - LOW: 0
+    - MEDIUM: 0
+    - HIGH: 0
+    - CRITICAL: 1
+
+--- Issues by Severity ---
+
+--- CRITICAL ---
+
+Unsafe operator found:
+  - Severity: CRITICAL
+  - Description: Use of unsafe operator 'exec' from module '__builtin__'
+  - Source: /home/zol/School/Research/BenchMarking_Hubs/payloads/advanced/anti_vm.pkl
+","Call to `exec(...)` is almost certainly evidence of a malicious pickle file
+Call to `exec(...)` is almost certainly evidence of a malicious pickle file
+Variable `_var0` is assigned value `exec(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL exec was not an allowed global by default. Please use `torch.serialization.add_safe_globals([exec])` or the `torch.serialization.safe_globals([exec])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+./payloads/advanced/external_staged_payload.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from external import dangerous_func` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `dangerous_func(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL external.dangerous_func was not an allowed global by default. Please use `torch.serialization.add_safe_globals([external.dangerous_func])` or the `torch.serialization.safe_globals([external.dangerous_func])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."

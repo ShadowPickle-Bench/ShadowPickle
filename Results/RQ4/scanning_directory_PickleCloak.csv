@@ -1,0 +1,417 @@
+name,picklescan_result,modelscan_result,fickling_result,modeltracer_result,fickling_category,weights_only_result,picklescan_output,modelscan_output,fickling_output,weights_only_output
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_20.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from sympy.parsing.sympy_parser import eval_expr` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `eval_expr(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_34.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.f2py.crackfortran import param_eval` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `param_eval(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_1.pkl,False,False,True,True,Severity.LIKELY_OVERTLY_MALICIOUS,True,False,False,"`from operator import getitem` imports `getitem` that is indicative of a malicious pickle file. This function can lead to arbitrary code execution
+Variable `_var2` is assigned value `_var1(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_4.pkl,True,False,True,True,Severity.SUSPICIOUS,True,"/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_4.pkl: dangerous import 'doctest debug_script' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+",False,Variable `_var0` is assigned value `debug_script(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_51.pkl,False,False,True,False,Severity.LIKELY_UNSAFE,True,False,False,"`from sympy.external.importtools import import_module` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var2` is assigned value `_var1('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_36.pkl,False,False,True,False,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.f2py.diagnose import run_command` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `run_command('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_0.pkl,True,False,True,True,Severity.SUSPICIOUS,True,"/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_0.pkl: dangerous import 'pydoc pipepager' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+",False,"Variable `_var0` is assigned value `pipepager('1', 'ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_52.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from sympy.external.importtools import import_module` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var2` is assigned value `_var1('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_15.pkl,False,False,True,True,Severity.SUSPICIOUS,True,False,False,Variable `_var0` is assigned value `runctx(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_32.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.f2py.crackfortran import _eval_scalar` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `_eval_scalar(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_22.pkl,False,False,True,False,Severity.LIKELY_UNSAFE,True,False,False,"`from sympy.polys.monomials import MonomialOps` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var2` is assigned value `_var1()` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_48.pkl,False,False,True,False,Severity.SUSPICIOUS,True,False,False,Variable `_var2` is assigned value `_var1('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_37.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.f2py.capi_maps import getinit` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `getinit(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_17.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from sympy.utilities.source import get_class` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var1` is assigned value `_var0('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_10.pkl,False,False,True,True,Severity.SUSPICIOUS,True,False,False,Variable `_var1` is assigned value `_var0('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_28.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.distutils.cpuinfo import command_info` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `command_info()` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_44.pkl,False,False,True,True,Severity.SUSPICIOUS,True,False,False,Variable `_var3` is assigned value `_var2('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_38.pkl,False,False,True,False,Severity.LIKELY_OVERTLY_MALICIOUS,True,False,False,"`from numpy.lib.utils import _makenamedict` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+`from operator import getitem` imports `getitem` that is indicative of a malicious pickle file. This function can lead to arbitrary code execution
+Variable `_var4` is assigned value `_var3('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_25.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.distutils.exec_command import _exec_command` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `_exec_command('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_6.pkl,False,False,True,True,Severity.SUSPICIOUS,True,False,False,Variable `_var0` is assigned value `_get_command_stdout(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_45.pkl,False,False,True,False,Severity.SUSPICIOUS,True,False,False,Variable `_var2` is assigned value `_var1('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_2.pkl,False,False,True,True,Severity.SUSPICIOUS,True,False,False,Variable `_var0` is assigned value `tempfilepager(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_47.pkl,False,False,True,True,Severity.SUSPICIOUS,True,False,False,Variable `_var3` is assigned value `_var2('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_13.pkl,False,False,True,True,Severity.SUSPICIOUS,True,False,False,Variable `_var2` is assigned value `_var1(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_19.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from sympy import symbols` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+`from sympy import sympify` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var1` is assigned value `sympify(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file
+Variable `_var0` is assigned value `symbols('x')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_9.pkl,False,False,True,False,Severity.SUSPICIOUS,True,False,False,Variable `_var0` is assigned value `AutoComplete()` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_8.pkl,True,False,True,True,Severity.SUSPICIOUS,True,"/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_8.pkl: dangerous import 'idlelib.calltip get_entity' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+",False,Variable `_var0` is assigned value `get_entity(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_29.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.distutils.cpuinfo import command_by_line` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var1` is assigned value `next(_var0)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_7.pkl,False,False,True,True,Severity.SUSPICIOUS,True,False,False,Variable `_var0` is assigned value `spawn(['ls'])` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_41.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.distutils.misc_util import get_cmd` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+`from numpy import __builtins__` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var1` is assigned value `_var0(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_49.pkl,False,False,True,True,Severity.SUSPICIOUS,True,False,False,Variable `_var2` is assigned value `_var1('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_50.pkl,False,False,True,True,Severity.SUSPICIOUS,True,False,False,Variable `_var3` is assigned value `_var2('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_30.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.core.fromnumeric import _wrapfunc` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+`from numpy import __builtins__` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var1` is assigned value `_var0(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_54.pkl,False,False,True,False,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.distutils.misc_util import exec_mod_from_location` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var2` is assigned value `_var1('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_21.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from sympy.physics.mechanics.functions import _sub_func` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+`from numpy import __builtins__` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var1` is assigned value `_var0(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_18.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from sympy import lazy_function` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var1` is assigned value `_var0('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_14.pkl,False,False,True,True,Severity.SUSPICIOUS,True,False,False,Variable `_var0` is assigned value `run(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_31.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.f2py.crackfortran import myeval` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `myeval(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_42.pkl,False,False,True,False,Severity.SUSPICIOUS,True,False,False,Variable `_var2` is assigned value `_var1('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_24.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.distutils.lib2def import getnm` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `getnm('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_26.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.core import _ufunc_reconstruct` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var1` is assigned value `_var0('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_12.pkl,True,False,True,True,Severity.SUSPICIOUS,True,"/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_12.pkl: dangerous import 'cProfile runctx' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+",False,Variable `_var0` is assigned value `runctx(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_56.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.distutils.misc_util import exec_mod_from_location` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var3` is assigned value `_var2('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_43.pkl,False,False,True,False,Severity.SUSPICIOUS,True,False,False,Variable `_var2` is assigned value `_var1('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_39.pkl,True,False,True,True,Severity.LIKELY_UNSAFE,True,"/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_39.pkl: dangerous import 'numpy.testing._private.utils measure' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+",False,"`from numpy.testing._private.utils import measure` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `measure(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_55.pkl,False,False,True,False,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.distutils.misc_util import exec_mod_from_location` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var2` is assigned value `_var1('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_46.pkl,False,False,True,True,Severity.SUSPICIOUS,True,False,False,Variable `_var2` is assigned value `_var1('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_53.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from sympy.external.importtools import import_module` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var3` is assigned value `_var2('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_35.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.f2py.crackfortran import vars2fortran` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `vars2fortran(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_3.pkl,False,False,True,True,Severity.SUSPICIOUS,True,False,False,Variable `_var0` is assigned value `_read_output('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_5.pkl,False,False,True,False,Severity.SUSPICIOUS,True,False,False,Variable `_var1` is assigned value `_var0()` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_16.pkl,False,False,True,True,Severity.SUSPICIOUS,True,False,False,Variable `_var2` is assigned value `_var1(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_23.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from sympy.printing.tests.test_repr import sT` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `sT(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_40.pkl,True,False,True,True,Severity.LIKELY_OVERTLY_MALICIOUS,True,"/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_40.pkl: dangerous import 'numpy.testing._private.utils runstring' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+",False,"`from numpy.testing._private.utils import runstring` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+`from numpy.testing._private.utils import runstring` imports `runstring` that is indicative of a malicious pickle file. This function can execute arbitrary code.
+Variable `_var0` is assigned value `runstring(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_11.pkl,True,False,True,True,Severity.SUSPICIOUS,True,"/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_11.pkl: dangerous import 'cProfile run' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+",False,Variable `_var0` is assigned value `run(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file,"Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_27.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.distutils.cpuinfo import getoutput` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `getoutput('ls')` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
+/mnt/The_Second_Drive/Security/ML_Research/PickleCloak/gadget/exploits/malicious_pkls/exp_33.pkl,False,False,True,True,Severity.LIKELY_UNSAFE,True,False,False,"`from numpy.f2py.crackfortran import analyzevars` imports a Python module that is not a part of the standard library; this can execute arbitrary code and is inherently unsafe
+Variable `_var0` is assigned value `analyzevars(...)` but unused afterward; this is suspicious and indicative of a malicious pickle file","Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html."
